@@ -1,0 +1,8 @@
+{
+  "name": "seyma-mood",
+  "owner": { "name": "Seyma" },
+  "description": "Seyma's mood bar for Claude Code.",
+  "plugins": [
+    { "name": "seyma-mood", "source": "./", "description": "Mood bar, tone and a working cat for Claude Code." }
+  ]
+}

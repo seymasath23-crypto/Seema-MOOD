@@ -1,0 +1,7 @@
+{
+  "name": "seyma-mood",
+  "version": "0.1.0",
+  "description": "A mood bar for Claude Code: pick Create, Build, Organize or Learn, get matching tool hints, a tone for Claude, and a little cat that walks while Claude works.",
+  "author": { "name": "Seyma" },
+  "types": "./types/index.d.ts"
+}
