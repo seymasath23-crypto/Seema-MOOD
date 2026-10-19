@@ -29,3 +29,24 @@ Needs Claude Code 2.1.287 or newer. Restart the session after installing.
 ## Notes
 
 The mood tone is added to Claude's system prompt through the `prompt.compose` hook. Where an organization manages Claude Code, that part may not run.
+
+## The mods I use with it
+
+This repo's marketplace also lists the mods I use. They are other people's work and nothing is copied here: each entry points to the author's own repository. Read a mod's repository before you install it.
+
+| Mod | Author | What it is |
+|---|---|---|
+| `savvy-flow` | JohnnyVizz | Plan, delegate to worker subagents, review |
+| `savvy-progress` | JohnnyVizz | Progress bar and live agents panel |
+| `skins` | hellosverre | Themes and a usage band |
+| `filetree` | data-goblin | File tree that shows what Claude is doing |
+| `cache-tax` | karanb192 | Prompt cache cost and keep-warm |
+| `blast-radius`, `replay-theater`, `token-weather` | Anthropic samples | See the playground repo |
+
+Install any of them from this marketplace, for example:
+
+```
+claude plugin install savvy-progress@seyma-mood
+```
+
+My own personal skills and the plugins synced from my claude.ai account are not part of this repo.

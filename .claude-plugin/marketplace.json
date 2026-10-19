@@ -1,8 +1,52 @@
 {
   "name": "seyma-mood",
   "owner": { "name": "Seyma" },
-  "description": "Seyma's mood bar for Claude Code.",
+  "description": "Seyma's mood bar for Claude Code, and the mods she uses with it.",
   "plugins": [
-    { "name": "seyma-mood", "source": "./", "description": "Mood bar, tone and a working cat for Claude Code." }
+    {
+      "name": "seyma-mood",
+      "source": "./",
+      "description": "Mood bar, tone and a working cat for Claude Code."
+    },
+    {
+      "name": "savvy-flow",
+      "source": { "source": "git-subdir", "url": "https://github.com/JohnnyVizz/claude-kit.git", "path": "plugins/savvy-flow", "ref": "main" },
+      "description": "By JohnnyVizz. Plan, delegate to tiered worker subagents, review."
+    },
+    {
+      "name": "savvy-progress",
+      "source": { "source": "git-subdir", "url": "https://github.com/JohnnyVizz/claude-kit.git", "path": "plugins/savvy-progress", "ref": "main" },
+      "description": "By JohnnyVizz. Progress bar above the prompt and a live agents panel."
+    },
+    {
+      "name": "skins",
+      "source": { "source": "github", "repo": "hellosverre/claude-skins" },
+      "description": "By hellosverre. Themes, tool rows with icons, diff cards and a usage band. /skin swaps them."
+    },
+    {
+      "name": "filetree",
+      "source": { "source": "github", "repo": "data-goblin/claude-code-filetree" },
+      "description": "By data-goblin. An IDE-style file tree that shows what Claude is doing."
+    },
+    {
+      "name": "cache-tax",
+      "source": { "source": "github", "repo": "karanb192/cache-tax" },
+      "description": "By karanb192. Keeps the prompt cache warm and shows what a cold send costs."
+    },
+    {
+      "name": "blast-radius",
+      "source": { "source": "git-subdir", "url": "https://github.com/anthropics/claude-code-playground.git", "path": "claude-code/mods/blast-radius", "ref": "main" },
+      "description": "Anthropic sample mod. See its README in the playground repo."
+    },
+    {
+      "name": "replay-theater",
+      "source": { "source": "git-subdir", "url": "https://github.com/anthropics/claude-code-playground.git", "path": "claude-code/mods/replay-theater", "ref": "main" },
+      "description": "Anthropic sample mod. See its README in the playground repo."
+    },
+    {
+      "name": "token-weather",
+      "source": { "source": "git-subdir", "url": "https://github.com/anthropics/claude-code-playground.git", "path": "claude-code/mods/token-weather", "ref": "main" },
+      "description": "Anthropic sample mod. See its README in the playground repo."
+    }
   ]
 }
