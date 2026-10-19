@@ -62,7 +62,7 @@ const ORDER: Mood[] = ['create', 'build', 'organize', 'learn']
 // One place changes the mood: the page state, the status line, a toast, and the saved choice for next time.
 async function setMood($: EngineInterface, next: Mood, isQuiet = false) {
   await update($, mood, () => next)
-  $.ui.status(`${MOODS[next].face} ${MOODS[next].label}`)
+  $.ui.status(`Mood: ${MOODS[next].label}`)
   if (!isQuiet) $.ui.toast(MOODS[next].line)
   await $.store.set('mood', next)
 }
@@ -118,7 +118,7 @@ export const register: Register = on => {
     }
     await setMood($, wanted)
 
-    return { text: `${MOODS[wanted].face} ${MOODS[wanted].line}` }
+    return { text: MOODS[wanted].line }
   })
 
   on('prompt.compose', async ($, e, next) => {
@@ -172,7 +172,6 @@ export const register: Register = on => {
           </Box>
         )}
         <Box>
-          <Text color={look.color} bold>{look.face}  </Text>
           {ORDER.map(one => (
             <Button
               key={one}
