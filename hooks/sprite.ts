@@ -4,9 +4,9 @@ export type HatKey = 'explorer' | 'cap' | 'beret' | 'hardhat'
 export const HAT_KEYS: HatKey[] = ['explorer', 'cap', 'beret', 'hardhat']
 
 const COLORS: Record<string, string> = {
-  o: '#d97757',
+  o: '#3b3744',
   d: '#201a17',
-  e: '#201a17',
+  e: '#f5d547',
   p: '#f4a6b7',
   b: '#8b5a2b',
   r: '#d94b4b',
