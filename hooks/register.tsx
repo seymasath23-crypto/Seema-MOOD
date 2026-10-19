@@ -173,13 +173,18 @@ export const register: Register = on => {
         )}
         <Box>
           {ORDER.map(one => (
-            <Button
-              key={one}
-              label={one === current ? `● ${MOODS[one].label}  ` : `${MOODS[one].label}  `}
-              onPress={() => setMood($, one)}
-            />
+            <Box key={one}>
+              <Text color={MOODS[one].color}>{one === current ? '●' : '○'}</Text>
+              <Button
+                label={MOODS[one].label}
+                variant={one === current ? 'primary' : 'secondary'}
+                hover={{ scope: `mood-${one}`, color: MOODS[one].color }}
+                onPress={() => setMood($, one)}
+              />
+              <Text> </Text>
+            </Box>
           ))}
-          <Text dimColor>{look.hint}</Text>
+          <Text color={look.color}>{look.hint}</Text>
         </Box>
       </Box>
     )
