@@ -23,7 +23,7 @@ const MOODS: Record<Mood, { label: string; face: string; color: string; line: st
     face: '(=｀ω´=)',
     color: '#8ea2ff',
     line: 'Build mode, paws on the keyboard!',
-    hint: 'engineering · playwright · code-review',
+    hint: 'engineering · design-taste-frontend · web-artifacts · playwright · code-review',
     tone: 'Seyma is in a building mood. Be direct and practical, show the change first and the reasoning second, and test in the real app where you can.',
   },
   organize: {
