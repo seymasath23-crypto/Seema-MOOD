@@ -77,5 +77,8 @@ export function catSvg(color: string, mode: CatMode): string {
       ? `<g><animateTransform attributeName="transform" type="translate" values="-180 0;580 0" dur="7s" repeatCount="indefinite"/>${sideCat(color)}</g>`
       : `${frontCat(color)}${YARN}`
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 134" width="200" height="48">${scene}</svg>`
+  // The playing scene is narrow so the text sits right beside the cat; the walk needs the whole strip.
+  const box = mode === 'walk' ? 'viewBox="0 0 560 134" width="200"' : 'viewBox="0 0 200 134" width="72"'
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" ${box} height="48">${scene}</svg>`
 }

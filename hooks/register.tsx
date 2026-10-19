@@ -49,8 +49,9 @@ const isWorking = atom({ plugin: 'seyma-mood', key: 'isWorking' } as const, fals
 
 // The pixel cat: a hat for each mood, a hop, a blink and walking legs; sparkles drift beside it.
 const HAT_OF: Record<Mood, HatKey> = { create: HAT_KEYS[2], build: HAT_KEYS[3], organize: HAT_KEYS[0], learn: HAT_KEYS[1] }
-const SPARKS = ['✦  ·', '·✧  ', ' ✦ ·', '  ✧·']
-const VERBS = ['purring along', 'working hard', 'almost there', 'on it, meow']
+// The cat's bow stays one colour whatever the mood.
+const BOW = '#ef476f'
+const VERBS = ['Purring along', 'Working hard', 'Almost there', 'On it, meow']
 
 const catMode = atom({ plugin: 'seyma-mood', key: 'catMode' } as const, 'play' as CatMode)
 
@@ -151,7 +152,7 @@ export const register: Register = on => {
         {working && (
           <Box>
             {e.surface === 'desktop' && Svg ? (
-              <Svg source={catSvg(look.color, mode)} alt={mode === 'walk' ? 'A cat walking while Claude works' : 'A cat playing with yarn'} width={200} height={48} isInteractive />
+              <Svg source={catSvg(BOW, mode)} alt={mode === 'walk' ? 'A cat walking while Claude works' : 'A cat playing with yarn'} width={mode === 'walk' ? 200 : 72} height={48} isInteractive />
             ) : (
               <Box flexDirection="column">
                 {paint(pixels(HAT_OF[current], n)).map(line => (
@@ -163,11 +164,12 @@ export const register: Register = on => {
                 ))}
               </Box>
             )}
-            <Box flexDirection="column" justifyContent="center" paddingLeft={2}>
-              <Text color={look.color} bold>
-                {VERBS[Math.floor(n / 6) % VERBS.length]}{'.'.repeat(1 + (n % 3))}
+            <Box flexDirection="column" justifyContent="center" paddingLeft={1}>
+              <Text bold>
+                {VERBS[Math.floor(n / 6) % VERBS.length]}
+                <Text dimColor>{'.'.repeat(1 + (n % 3))}</Text>
               </Text>
-              <Text color={look.color}>{SPARKS[n % SPARKS.length]}</Text>
+              <Text dimColor>{mode === 'walk' ? 'Claude is running tools' : 'Claude is thinking'}</Text>
             </Box>
           </Box>
         )}
