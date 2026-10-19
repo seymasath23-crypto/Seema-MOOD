@@ -13,11 +13,11 @@ A mood bar for Claude Code. Pick how you feel and Claude changes with it.
 In a terminal, run these one at a time:
 
 ```
-claude plugin marketplace add <owner>/seyma-mood
+claude plugin marketplace add seymasath23-crypto/seyma-mood
 claude plugin install seyma-mood@seyma-mood
 ```
 
-In the desktop app, click **+** next to the prompt box, then **Plugins**, then **Add marketplace** and enter `<owner>/seyma-mood`. Then add the `seyma-mood` plugin.
+In the desktop app, click **+** next to the prompt box, then **Plugins**, then **Add marketplace** and enter `seymasath23-crypto/seyma-mood`. Then add the `seyma-mood` plugin.
 
 Needs Claude Code 2.1.287 or newer. Restart the session after installing.
 
