@@ -151,7 +151,7 @@ export const register: Register = on => {
         {working && (
           <Box>
             {e.surface === 'desktop' && Svg ? (
-              <Svg source={catSvg(HAT_OF[current], mode)} alt={mode === 'walk' ? 'A cat walking while Claude works' : 'A cat playing with yarn'} width={200} height={48} isInteractive />
+              <Svg source={catSvg(look.color, mode)} alt={mode === 'walk' ? 'A cat walking while Claude works' : 'A cat playing with yarn'} width={200} height={48} isInteractive />
             ) : (
               <Box flexDirection="column">
                 {paint(pixels(HAT_OF[current], n)).map(line => (

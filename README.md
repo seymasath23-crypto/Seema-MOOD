@@ -5,8 +5,8 @@ A mood bar for Claude Code. Pick how you feel and Claude changes with it.
 - **Four moods:** Create, Build, Organize and Learn. Click a button above the prompt, or type `/mood build`.
 - **Tone:** each mood gives Claude a short instruction, such as "short and visual" for Create or "direct and practical" for Build.
 - **Remembers you:** your last mood comes back in the next session.
-- **A working cat:** in the desktop app a small black cat walks from left to right while Claude runs tools, and plays with yarn while it thinks. In a terminal you get a block-pixel version.
-- **Hats:** the cat wears a different hat for each mood.
+- **A working cat:** in the desktop app a flat black cat with gold-ringed eyes walks from left to right while Claude runs tools, and sits and plays with yarn while it thinks. Its collar and bow take the colour of your mood.
+- **Hats:** in a terminal the block-pixel cat wears a hat for each mood.
 
 ## Install
 
